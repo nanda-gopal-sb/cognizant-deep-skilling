@@ -1,7 +1,5 @@
 public class App {
     public static void main(String[] args) {
-        System.out.println("--- Starting Singleton Verification ---");
-
         Logger firstReference = Logger.getLogger();
         Logger secondReference = Logger.getLogger();
 
