@@ -8,7 +8,6 @@ public class CreditCardPayment implements PaymentStrategy {
         this.cardNumber = cardNumber;
         this.name = name;
     }
-
     @Override
     public void pay(double amount) {
         System.out.println("Processing payment of $" + amount + " using Credit Card (" + maskCardNumber(cardNumber) + ").");
