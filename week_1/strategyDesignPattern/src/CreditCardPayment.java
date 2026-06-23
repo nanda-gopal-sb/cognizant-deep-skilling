@@ -1,6 +1,7 @@
 // CreditCardPayment.java
 public class CreditCardPayment implements PaymentStrategy {
     private String cardNumber;
+    @SuppressWarnings("unused")
     private String name;
 
     public CreditCardPayment(String cardNumber, String name) {
