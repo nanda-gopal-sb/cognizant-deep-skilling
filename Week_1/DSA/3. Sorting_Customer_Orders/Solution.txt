@@ -1,0 +1,67 @@
+1. Understand Sorting Algorithms
+-Sorting algorithms arrange data in a specific order (ascending or descending).
+
+    Bubble Sort
+        * Repeatedly compares adjacent elements.
+        * Swaps them if they are in the wrong order.
+
+        Complexities:
+            Best - O(n)
+            Average - O(n²)
+            Worst - O(n²)
+
+
+    Insertion Sort
+        * Takes one element at a time.
+        * Inserts it into its correct position.
+
+         Complexities:
+            Best - O(n)
+            Average - O(n²)
+            Worst - O(n²)
+
+
+    Quick Sorting 
+        * Uses a Pivot element.
+        * Places smaller elements on the left.
+        * Places larger elements on the right.
+        * Recursively sorts both halves.
+
+        Complexities:
+            Best - O(n log n)
+            Average - O(n log n)
+            Worst - O(n²)
+
+
+    Merge Sort
+        * Divides the array into halves.
+        * Recursively sorts each half.
+        * Merges sorted halves.
+
+        Complexities:
+            Best - O(n log n)
+            Average - O(n log n)
+            Worst - O(n log n²)
+
+2. Setup ✅
+3. Implementation ✅
+
+4. Analysis:
+
+    Why Quick Sort is Preferred
+
+        Bubble Sort
+            ✅ Easy to understand and implement.
+            ❌ Very slow for large datasets.
+            ❌ Not suitable for real-world e-commerce systems.
+
+        Quick Sort
+            ✅ Much faster for large datasets.
+            ✅ Widely used in practice.
+            ✅ Average complexity is O(n log n).
+            ✅ Efficient for sorting thousands or millions of records.
+
+Conclusion
+    -For sorting customer orders by totalPrice, Quick Sort is generally preferred because it provides an average time complexity of O(n log n),
+    making it significantly faster than Bubble Sort’s O(n²) performance. While Bubble Sort is simpler to implement, 
+    Quick Sort is more suitable for large-scale e-commerce platforms where fast order processing and prioritization of high-value orders are important.

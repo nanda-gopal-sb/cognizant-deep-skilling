@@ -1,0 +1,63 @@
+1. Understand Asymptotic Notation
+
+    What is Big O Notation?
+    -Big O Notation is a mathematical way to describe how the execution time of an algorithm grows as the input size (n) increases.
+
+    It helps us:
+        * Compare different algorithms.
+        * Predict performance for large datasets.
+        * Choose the most efficient solution.
+
+    Common Complexities:
+    O(1)- Constant
+    O(log n)- Logarithmic
+    O(n)- Linear
+    O(n log n)- Linearithmic
+    O(n^2)- Quadratic
+
+    Search Operation Cases:
+
+        Best Case - Element found immediately.
+        Linear Search - O(1);
+        Binary Search - O(1);
+
+        Average Case - The element is somewhere in the middle.
+        Linear Search - O(n);
+        Binary Search - O(log n);
+
+        Worst Case - The element is at the last position or not present.
+        Linear Search - O(n);
+        Binary Search - O(log n);
+
+2. Setup ✅
+3. Implementation ✅
+
+4. Analysis:
+
+    Time Complexities:
+        Linear Search : O(n);
+        Binary Search : O(log n);
+    
+    Which is better ? 
+        Linear Search:
+            * Simple implementation. ✅
+            * Works on unsorted data. ✅
+            * Slow for large datasets. ❌
+
+            Suitable when:
+                * Small number of products.
+                * Data is not sorted.
+
+        Binary Search:
+            * Extremely fast.✅
+            * Efficient for large datasets.✅
+            * Requires sorted data. (✅/❌)
+
+            Suitable when:
+                * Large e-commerce catalogs.✅
+                * Frequent search operations.✅
+
+Conclusion:
+For an e-commerce platform containing thousands or millions of products, Binary Search is more suitable because it has O(log n) time complexity compared to O(n) for Linear Search.
+Although it requires the product array to be sorted, the significant improvement in search performance makes it the preferred choice for large-scale applications.
+

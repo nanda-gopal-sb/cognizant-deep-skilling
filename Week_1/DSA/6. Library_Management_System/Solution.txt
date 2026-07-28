@@ -1,0 +1,121 @@
+Searching Algorithms
+
+Searching algorithms are used to find a specific element in a collection of data such as an array or a list. Two of the most commonly used searching techniques are Linear Search and Binary Search.
+
+
+1. Linear Search
+
+Linear Search is a simple searching algorithm that checks each element in a list or array one by one until the target element is found or the end of the list is reached.
+
+Steps
+
+1. Start from the first element of the list.
+2. Compare the target element with the current element.
+3. If they match, return the index or the element.
+4. Otherwise, move to the next element.
+5. Repeat the process until the end of the list.
+6. If the target element is not found, return null or indicate that the element is not present.
+
+Time Complexity - O(n)
+
+ - In the worst case, every element in the list must be checked before finding the target or concluding that it does not exist.
+
+Example
+
+Array: [3, 5, 7, 9, 11]
+Target: 7
+
+Linear Search checks:
+* 3 x
+* 5 x
+* 7 ✅
+
+The element is found at the third position.
+
+2. Binary Search
+
+ - Binary Search is an efficient searching algorithm that works only on sorted arrays or lists. It repeatedly divides the search space into two halves until the target element is found.
+
+Steps
+
+1. Start with the entire sorted list.
+2. Find the middle element.
+3. Compare the target element with the middle element.
+    * If they are equal, return the index or element.
+    * If the target is smaller, search the left half.
+    * If the target is larger, search the right half.
+4. Repeat the process until the element is found or the search interval becomes empty.
+
+Time Complexity: O(log n)
+
+    -Binary Search reduces the search space by half after every comparison, making it much faster than Linear Search for large datasets.
+
+Example
+
+Sorted Array:[3, 5, 7, 9, 11]
+Target:7
+
+Binary Search checks the middle element (7) and finds the target immediately.
+
+
+Time Complexity Comparison
+
+Algorithm	Time Complexity	Explanation
+Linear Search	O(n)	May need to examine every element in the worst case.
+Binary Search	O(log n)	Repeatedly halves the search space, making it much faster for large datasets.
+
+
+When to Use Linear Search
+
+Use Cases
+
+* Data is unsorted.
+* Dataset is small.
+* Searches are infrequent.
+
+Advantages
+
+* Very simple to implement.
+* Works on both sorted and unsorted data.
+* No preprocessing is required.
+
+Disadvantages
+
+* Slow for large datasets.
+* Performance decreases linearly as the dataset grows.
+
+
+When to Use Binary Search
+
+Use Cases
+
+* Data is sorted.
+* Dataset is large.
+* Searches are frequent on static (unchanging) data.
+
+Advantages
+
+* Much faster than Linear Search for large datasets.
+* Efficient due to logarithmic time complexity.
+
+Disadvantages
+
+* Requires the data to be sorted.
+* Sorting the data first may take additional time.
+* Slightly more complex to implement than Linear Search.
+
+
+Comparison: Linear Search vs Binary Search
+
+Feature	Linear Search	Binary Search
+Data Requirement	Works on sorted and unsorted data	Requires sorted data
+Time Complexity	O(n)	O(log n)
+Best for	Small or unsorted datasets	Large and sorted datasets
+Implementation	Simple	Moderate
+Search Method	Sequential	Divide and Conquer
+
+
+Conclusion
+
+* Linear Search is best suited for small or unsorted datasets because of its simplicity.
+* Binary Search is ideal for large, sorted datasets because it significantly reduces the number of comparisons required, resulting in much better performance.

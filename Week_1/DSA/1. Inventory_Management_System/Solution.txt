@@ -1,0 +1,45 @@
+1.  
+Understand the Problem
+
+        * Store large amounts of product data efficiently.
+        * Search products quickly.
+        * Update inventory records with minimal delay.
+        * Reduce memory usage and improve system performance.
+        * Handle real-time inventory operations smoothly.
+
+Suitable Data Structures
+        * Using ArrayList because it is easier to implement, maintain order but slow search/update/delete - (O(n)).
+        * Using LinkedList because provides fast insertion,deletion but slow searching - (O(n)).
+        * Using HashMap provides Fast search, insert, update, delete (O(1) average) but it doesn't maintain order;
+        * Using TreeMap provides operations in O(log n) and maintain order.
+
+    so according to out requirements as we need efficient Insertion, Deletion, Searching and don't need to maintain the order.
+    So HashMap will be the efficient choice ✅.
+
+2. Setup
+    InventoryManagementSystem 
+    ├── Product.java
+    ├── InventoryManager.java
+    └── Main.java
+
+4. Analysis
+
+    Time Complexity
+        Using HashMap:
+        Add Product: O(1) average     O(n) worst
+        Search Product : O(1) average     O(n) worst
+        Update Product : O(1) average     O(n) worst
+        Delete Product: O(1) average     O(n) worst
+
+Optimization:
+    1. Use HashMap instead of ArrayList
+        * ArrayList search/update/delete = O(n)
+        * HashMap search/update/delete = O(1)
+    2. Use Product ID as Key
+        * Direct access without traversing the entire inventory.
+    3. Use TreeMap if Sorted Data is Needed
+        * Maintains products in sorted order.
+        * Complexity becomes O(log n).
+    4. Database Indexing (for real-world systems)
+        * Create indexes on Product ID.
+        * Faster retrieval from large databases.

@@ -1,0 +1,198 @@
+Recursion
+    -Recursion is a programming technique in which a function calls itself to solve smaller instances of the same problem. It breaks a complex problem into simpler sub-problems until a base condition is reached.
+
+Components of Recursion
+
+1. Base Case
+
+The base case is the condition that stops the recursive calls. It prevents infinite recursion and provides the simplest solution to the problem.
+
+Example
+
+For factorial calculation:
+
+    * 0! = 1
+    * 1! = 1
+
+When the input becomes 0 or 1, the function returns 1 and recursion stops.
+
+2. Recursive Case
+
+The recursive case is where the function calls itself with a smaller version of the original problem.
+
+Example
+
+For factorial calculation:
+
+Factorial(n) = n × Factorial(n − 1)
+
+Each recursive call reduces the value of n until it reaches the base case.
+
+Example: Factorial Calculation
+
+The factorial of a number n is defined as:
+
+* n! = n × (n − 1)!
+* Base Case: 0! = 1 or 1! = 1
+
+For example:
+
+5! = 5 × 4 × 3 × 2 × 1 = 120
+
+The recursive calls occur as follows:
+
+factorial(5)
+    ↓
+5 × factorial(4)
+    ↓
+5 × 4 × factorial(3)
+    ↓
+5 × 4 × 3 × factorial(2)
+    ↓
+5 × 4 × 3 × 2 × factorial(1)
+    ↓
+5 × 4 × 3 × 2 × 1
+    ↓
+120
+
+
+How Recursion Simplifies Problems
+
+1. Divide and Conquer
+
+Recursion divides a large problem into smaller and simpler sub-problems, making it easier to solve.
+
+2. Elegant Solutions
+
+Recursive programs are often shorter, cleaner, and easier to understand than iterative solutions.
+
+3. Natural Fit for Certain Problems
+
+Recursion is ideal for problems that have a recursive structure, such as:
+
+* Tree Traversals
+* Fibonacci Sequence
+* Tower of Hanoi
+* Factorial Calculation
+* Graph Traversals (DFS)
+
+4. Reduces Problem Complexity
+
+Each recursive call handles one smaller part of the problem, simplifying the overall solution.
+
+Drawbacks of Recursion
+
+1. Stack Overflow
+
+Every recursive call uses stack memory. If recursion becomes too deep, it can cause a Stack Overflow Error.
+
+2. Performance Issues
+
+Recursive solutions may perform repeated calculations, making them slower than iterative solutions.
+
+Using Memoization can eliminate redundant computations and improve efficiency.
+
+3. Difficult Debugging
+
+Tracing recursive function calls can be more difficult than debugging iterative programs.
+
+
+Time Complexity Analysis
+
+The recursive method calculateFutureValueMemoized uses recursion along with memoization.
+
+Time Complexity
+
+Base Case
+
+When years = 0, the function returns the principal amount.
+
+Time Complexity: O(1)
+
+Recursive Case
+
+Each recursive call decreases the number of years by one and performs a constant amount of work.
+
+Memoization
+
+Memoization stores previously calculated results, ensuring that each value is computed only once.
+
+Overall Time Complexity
+
+O(n)
+
+where n is the number of years.
+
+Space Complexity Analysis
+
+Stack Space
+
+The recursion depth is equal to the number of years.
+
+Space Complexity: O(n)
+
+Memoization Space
+
+The memoization table stores one result for each year.
+
+Space Complexity: O(n)
+
+Overall Space Complexity
+
+O(n)
+
+Optimizations to Avoid Excessive Computation
+
+1. Use Iteration Instead of Recursion
+
+An iterative solution avoids recursive function calls and stack memory.
+
+Advantages
+
+* Time Complexity: O(n)
+* Space Complexity: O(1)
+* No risk of Stack Overflow.
+
+2. Avoid Unnecessary Memoization
+
+For simple calculations such as compound growth, memoization provides little benefit because each value is calculated only once.
+
+An iterative solution is generally more practical.
+
+3. Use the Mathematical Formula
+
+For compound interest or future value calculations, the formula can be used directly:
+
+Future Value = Principal × (1 + Rate)Years
+
+Advantages
+
+* Time Complexity: O(1)
+* No recursion
+* No iteration
+* Most efficient solution for this problem
+
+Comparison of Approaches
+
+Approach	Time Complexity	Space Complexity	Advantages
+Recursive	O(n)	O(n)	Simple and elegant
+Recursive with Memoization	O(n)	O(n)	Avoids repeated calculations
+Iterative	O(n)	O(1)	More memory efficient
+Mathematical Formula	O(1)	O(1)	Fastest and most efficient
+
+Advantages of Recursion
+
+* Simple and elegant code.
+* Easy to solve divide-and-conquer problems.
+* Ideal for recursive data structures like trees and graphs.
+* Reduces code complexity for naturally recursive problems.
+
+Disadvantages of Recursion
+
+* Higher memory usage due to function call stack.
+* Can cause Stack Overflow for deep recursion.
+* Often slower than iteration because of function call overhead.
+* More difficult to debug and trace.
+
+Conclusion
+    -Recursion is a powerful programming technique that solves problems by breaking them into smaller sub-problems. Every recursive solution consists of a base case and a recursive case. While recursion provides elegant and readable solutions, it may consume more memory and processing time. For performance-critical problems, iterative methods or direct mathematical formulas are often preferred.

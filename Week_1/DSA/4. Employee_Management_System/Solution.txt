@@ -1,0 +1,32 @@
+Time Complexity Analysis
+
+    - Add Employee - O(1)
+    - Search Employee - O(n)
+    - Traverse Employees - O(n)
+    - Delete Employee - O(n)
+
+    Explanation
+
+        * Add - Insert at the next available index - O(1)
+        * Search - May need to scan the entire array - O(n)
+        * Traverse - Visit every employee - O(n)
+        * Delete - Find employee and shift remaining elements - O(n)
+
+Advantages of Arrays
+
+    * Fast index-based access (O(1)).
+    * Simple implementation.
+    * Memory efficient due to contiguous storage.
+
+
+Limitations of Arrays
+
+    * Fixed size.
+    * Insertion and deletion can be costly.
+    * Searching is slow for large unsorted arrays.
+
+When to Use Arrays
+
+    * The number of records is known beforehand.
+    * Fast access by index is required.
+    * Insertions and deletions are infrequent.

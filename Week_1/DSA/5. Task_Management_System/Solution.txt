@@ -1,0 +1,130 @@
+Linked Lists
+
+    -Linked lists are fundamental data structures used in computer science to store a collection of elements. They consist of nodes, where each node contains data and a reference (pointer) to the next node in the sequence. Depending on the type of linked list, a node may also contain a reference to the previous node.
+
+1. Singly Linked List
+
+    -A Singly Linked List is a type of linked list in which each node points only to the next node in the sequence. The last node points to null, indicating the end of the list.
+
+    Structure
+
+        Each node contains:
+
+        * Data – Stores the value or information.
+        * Next – Stores the reference to the next node.
+
+    Characteristics
+
+        * Unidirectional Traversal – Nodes can only be traversed from head to tail.
+        * Simple Implementation – Easier to implement than other linked list types.
+        * Efficient Insertions/Deletions at Beginning – Inserting or deleting at the beginning takes constant time.
+        * Traversal Required for Middle/End Operations – Insertion or deletion at any other position requires traversal.
+
+    Common Operations
+
+        * Traversal – Visit each node from the head to the end.
+        * Insertion – Add a node at the beginning, end, or a specific position.
+        * Deletion – Remove a node by updating the reference of the previous node.
+
+
+2. Doubly Linked List
+
+    -A Doubly Linked List is a linked list where each node contains references to both the next and the previous node, allowing traversal in both directions.
+
+    Structure
+
+        Each node contains:
+
+            * Data – Stores the value or information.
+            * Next – Reference to the next node.
+            * Previous – Reference to the previous node.
+
+    Characteristics
+
+        * Bidirectional Traversal – Can move forward as well as backward.
+        * Additional Memory Requirement – Extra space is needed for the previous reference.
+        * Greater Flexibility – Easier insertion and deletion operations when working with both directions.
+
+    Common Operations
+
+        * Forward Traversal
+        * Backward Traversal
+        * Insertion at the beginning, end, or any position.
+        * Deletion by updating both previous and next references.
+
+
+Comparison: Singly vs Doubly Linked List
+
+    Feature	Singly Linked List	Doubly Linked List
+    Direction	One-way	Two-way
+    References per Node	One (next)	Two (next and previous)
+    Memory Usage	Less	More
+    Implementation	Simple	More Complex
+    Traversal	Forward Only	Forward & Backward
+    Insertion/Deletion	Efficient at beginning	More flexible throughout the list
+
+
+Time Complexity Analysis
+
+    Operation	Time Complexity	Explanation
+    Add a Node (at end)	O(n)	Traverse the list to reach the last node.
+    Search a Node	O(n)	May require visiting every node.
+    Traverse the List	O(n)	Every node is visited once.
+    Delete a Node	O(n)	Search takes O(n); deletion itself is O(1).
+
+
+Advantages of Linked Lists over Arrays
+
+    1. Dynamic Size
+
+        * Can grow or shrink dynamically.
+        * No need to define the size beforehand.
+
+    2. Efficient Insertions and Deletions
+
+        * Insertion and deletion can be performed in O(1) time if the node position is already known.
+        * No shifting of elements is required.
+
+    3. Better Memory Utilization
+
+        * Memory is allocated only when a new node is created.
+        * No unused memory is reserved in advance.
+
+    4. No Reallocation Overhead
+
+        * Linked lists do not require resizing.
+        * No copying of elements is needed when the structure grows.
+
+    5. Suitable for Dynamic Data Structures
+
+        Linked lists are commonly used to implement:
+
+        * Stacks
+        * Queues
+        * Deques
+        * Graphs
+        * Hash Table Chaining
+
+
+Disadvantages of Linked Lists
+
+1. Extra Memory Usage
+
+Each node stores one or more references, increasing memory consumption.
+
+2. Poor Cache Performance
+
+Nodes are stored at different memory locations, resulting in lower cache efficiency compared to arrays.
+
+3. Sequential Access
+
+Elements cannot be accessed directly by index. Traversal from the head is required.
+
+4. More Complex Pointer Management
+
+Maintaining node references makes implementation more complex than arrays.
+
+
+Conclusion
+
+Linked lists are an efficient choice when frequent insertions and deletions are required or when the size of the data changes dynamically. However, they consume extra memory and provide slower random access compared to arrays. Choosing between arrays and linked lists depends on the specific requirements of the application.

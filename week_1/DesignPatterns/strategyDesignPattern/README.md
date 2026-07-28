@@ -1,1 +1,0 @@
-## Stategy Pattern
